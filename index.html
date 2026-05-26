@@ -89,58 +89,11 @@
                 <!-- 拱形背景裝飾線 -->
                 <div class="absolute inset-0 border-[12px] border-editorial-bg rounded-t-full pointer-events-none opacity-50"></div>
                 
-                <!-- 新版插圖：對應上傳之 3D 動畫風格瞇眼微笑大叔 -->
-                <svg class="w-10/12 h-[85%] text-editorial-text opacity-95 mb-0" viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- 身體與米色襯衫 -->
-                    <path d="M15 250 C15 170, 50 145, 100 145 C150 145, 185 170, 185 250" fill="#E6E3DC" stroke="#1C1A17" stroke-width="2.5" />
-                    <!-- 襯衫門襟與領口 -->
-                    <path d="M100 145 L100 250" stroke="#1C1A17" stroke-width="2" />
-                    <path d="M85 146 L100 170 L115 146" fill="none" stroke="#1C1A17" stroke-width="2.5" />
-                    <!-- 襯衫鈕扣 -->
-                    <circle cx="100" cy="190" r="2.5" fill="#1C1A17" />
-                    <circle cx="100" cy="215" r="2.5" fill="#1C1A17" />
-                    <circle cx="100" cy="240" r="2.5" fill="#1C1A17" />
-                    
-                    <!-- 脖子 -->
-                    <path d="M82 120 L82 155 C82 155, 100 162, 118 155 L118 120 Z" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
-                    
-                    <!-- 雙耳 -->
-                    <circle cx="58" cy="98" r="14" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
-                    <circle cx="142" cy="98" r="14" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
-                    <!-- 耳廓細節 -->
-                    <path d="M58 92 C54 94, 54 102, 58 104" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M142 92 C146 94, 146 102, 142 104" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
-
-                    <!-- 臉部 -->
-                    <path d="M64 80 C64 45, 136 45, 136 80 C136 118, 118 135, 100 135 C82 135, 64 118, 64 80 Z" fill="#F3E2D3" stroke="#1C1A17" stroke-width="2.5" />
-                    
-                    <!-- 頭髮 (黑髮，往上往後梳的蓬鬆厚度) -->
-                    <path d="M62 76 C56 60, 68 32, 100 30 C132 32, 144 60, 138 76 C143 65, 138 48, 126 42 C115 36, 85 36, 74 42 C62 48, 57 65, 62 76 Z" fill="#1C1A17" stroke="#1C1A17" stroke-width="1" />
-                    <!-- 髮絲細節紋理 -->
-                    <path d="M80 34 C88 24, 104 22, 116 28" fill="none" stroke="#1C1A17" stroke-width="2" stroke-linecap="round" />
-                    <path d="M72 45 C80 34, 100 32, 115 38" fill="none" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M90 30 C96 20, 110 24, 122 32" fill="none" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
-
-                    <!-- 瞇瞇眼 (兩條往上彎的溫暖弧線) -->
-                    <path d="M76 86 C82 80, 90 80, 94 86" fill="none" stroke="#1C1A17" stroke-width="3" stroke-linecap="round" />
-                    <path d="M106 86 C110 80, 118 80, 124 86" fill="none" stroke="#1C1A17" stroke-width="3" stroke-linecap="round" />
-
-                    <!-- 粗眉毛 -->
-                    <path d="M72 74 C78 70, 88 70, 92 75" fill="none" stroke="#1C1A17" stroke-width="4.5" stroke-linecap="round" />
-                    <path d="M108 74 C112 70, 122 70, 128 75" fill="none" stroke="#1C1A17" stroke-width="4.5" stroke-linecap="round" />
-
-                    <!-- 鼻子 (圓潤且帶有些微陰影感) -->
-                    <path d="M94 98 C94 92, 106 92, 106 98 C106 104, 94 104, 94 98 Z" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2" />
-
-                    <!-- 微笑嘴巴 (溫和、單純的弧線) -->
-                    <path d="M82 112 Q100 122 118 112" fill="none" stroke="#1C1A17" stroke-width="2.5" stroke-linecap="round" />
-
-                    <!-- 下巴陰影與鬍渣點綴 (低調乾淨) -->
-                    <path d="M96 128 Q100 129 104 128" stroke="#1C1A17" stroke-width="1" stroke-linecap="round" />
-                </svg>
+                <!-- 實體照片：優先尋找 images 目錄，失效時自動降級尋找根目錄 -->
+                <img src="images/man001.png" alt="不太行的隊友" class="w-full h-full object-cover rounded-t-full" onerror="this.onerror=null; this.src='man001.png';">
 
                 <!-- 水印標籤 -->
-                <div class="absolute bottom-4 bg-editorial-text text-editorial-bg text-[10px] font-mono py-1 px-3 rounded-full uppercase tracking-widest">
+                <div class="absolute bottom-4 bg-editorial-text text-editorial-bg text-[10px] font-mono py-1 px-3 rounded-full uppercase tracking-widest z-10">
                     Zzz... SLEEP MODE Active
                 </div>
             </div>
