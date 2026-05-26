@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不太行的隊友 - Portfolio</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入高階社論風格專用字型：Playfair Display (優雅襯線) & Inter (極簡現代) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        editorial: {
+                            bg: '#E5E2DC',      /* 原圖的高質感溫暖灰泥色 */
+                            card: '#DCD9D3',    /* 稍深一點的卡片底色 */
+                            text: '#1C1A17',    /* 近乎黑的極深碳灰 */
+                            muted: '#6E6A64',   /* 優雅的灰褐色 */
+                            border: '#D0CDC6'   /* 細緻邊框色 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        mono: ['Courier New', 'Courier', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E2DC;
+            color: #1C1A17;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        /* 自訂細線樣式，完美還原設計稿 */
+        .thin-border {
+            border-color: #D0CDC6;
+        }
+    </style>
+</head>
+<body class="selection:bg-editorial-text selection:text-editorial-bg min-h-screen flex flex-col justify-between overflow-x-hidden antialiased">
+
+    <!-- 頂部導覽列 (微型) -->
+    <nav class="max-w-7xl mx-auto w-full px-6 py-6 md:py-8 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-editorial-text"></span>
+            <span class="font-mono text-xs uppercase tracking-widest font-semibold">不太行的隊友</span>
+        </div>
+        <!-- 狀態預留 (已移除 MENU 按鈕) -->
+        <div class="flex items-center gap-4">
+            <span class="text-xs font-mono text-editorial-muted">STATUS: IDLE // 待命</span>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 (Hero Section) - 完全重現原圖三欄不對稱黃金排版 -->
+    <section class="max-w-7xl mx-auto w-full px-6 pt-6 pb-16 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- 左欄：標題、副標與行動按鈕 (占比 4/12) -->
+        <div class="lg:col-span-4 flex flex-col justify-center order-2 lg:order-1">
+            <p class="text-sm font-mono text-editorial-muted tracking-wider mb-3">Hey, I'm 不太行的隊友,</p>
+            <h1 class="serif-title text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none mb-6">
+                A UI/UX <br>
+                <span class="italic font-normal">& Sleep</span><br>
+                DESIGNER.
+            </h1>
+            <p class="text-editorial-muted text-sm md:text-base mb-8 leading-relaxed max-w-sm">
+                將大膽的點子轉化為無所事事的具體實踐。擅長利用大腦離線、碳水化合物降解，來達成全天候的重力平衡與靜止。
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <!-- 聯絡按鈕：加入 3D 浮出與投影過渡 -->
+                <a href="#contact" class="inline-flex items-center gap-3 bg-editorial-text text-editorial-bg px-6 py-3.5 rounded-full text-xs font-semibold tracking-wider hover:bg-neutral-800 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_12px_24px_rgba(28,26,23,0.18)] transition-all duration-300 ease-out group">
+                    聯絡我 / CONTACT ME 
+                    <span class="group-hover:translate-x-2 transition-transform duration-300">➔</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 中欄：經典拱型人像插圖外框 (占比 5/12) -->
+        <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+            <!-- 拱型容器 -->
+            <div class="relative w-full max-w-[340px] aspect-[4/5] bg-editorial-card rounded-t-full overflow-hidden border thin-border flex items-end justify-center shadow-sm">
+                <!-- 拱形背景裝飾線 -->
+                <div class="absolute inset-0 border-[12px] border-editorial-bg rounded-t-full pointer-events-none opacity-50"></div>
+                
+                <!-- 新版插圖：對應上傳之 3D 動畫風格瞇眼微笑大叔 -->
+                <svg class="w-10/12 h-[85%] text-editorial-text opacity-95 mb-0" viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 身體與米色襯衫 -->
+                    <path d="M15 250 C15 170, 50 145, 100 145 C150 145, 185 170, 185 250" fill="#E6E3DC" stroke="#1C1A17" stroke-width="2.5" />
+                    <!-- 襯衫門襟與領口 -->
+                    <path d="M100 145 L100 250" stroke="#1C1A17" stroke-width="2" />
+                    <path d="M85 146 L100 170 L115 146" fill="none" stroke="#1C1A17" stroke-width="2.5" />
+                    <!-- 襯衫鈕扣 -->
+                    <circle cx="100" cy="190" r="2.5" fill="#1C1A17" />
+                    <circle cx="100" cy="215" r="2.5" fill="#1C1A17" />
+                    <circle cx="100" cy="240" r="2.5" fill="#1C1A17" />
+                    
+                    <!-- 脖子 -->
+                    <path d="M82 120 L82 155 C82 155, 100 162, 118 155 L118 120 Z" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
+                    
+                    <!-- 雙耳 -->
+                    <circle cx="58" cy="98" r="14" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
+                    <circle cx="142" cy="98" r="14" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2.5" />
+                    <!-- 耳廓細節 -->
+                    <path d="M58 92 C54 94, 54 102, 58 104" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M142 92 C146 94, 146 102, 142 104" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
+
+                    <!-- 臉部 -->
+                    <path d="M64 80 C64 45, 136 45, 136 80 C136 118, 118 135, 100 135 C82 135, 64 118, 64 80 Z" fill="#F3E2D3" stroke="#1C1A17" stroke-width="2.5" />
+                    
+                    <!-- 頭髮 (黑髮，往上往後梳的蓬鬆厚度) -->
+                    <path d="M62 76 C56 60, 68 32, 100 30 C132 32, 144 60, 138 76 C143 65, 138 48, 126 42 C115 36, 85 36, 74 42 C62 48, 57 65, 62 76 Z" fill="#1C1A17" stroke="#1C1A17" stroke-width="1" />
+                    <!-- 髮絲細節紋理 -->
+                    <path d="M80 34 C88 24, 104 22, 116 28" fill="none" stroke="#1C1A17" stroke-width="2" stroke-linecap="round" />
+                    <path d="M72 45 C80 34, 100 32, 115 38" fill="none" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M90 30 C96 20, 110 24, 122 32" fill="none" stroke="#1C1A17" stroke-width="1.5" stroke-linecap="round" />
+
+                    <!-- 瞇瞇眼 (兩條往上彎的溫暖弧線) -->
+                    <path d="M76 86 C82 80, 90 80, 94 86" fill="none" stroke="#1C1A17" stroke-width="3" stroke-linecap="round" />
+                    <path d="M106 86 C110 80, 118 80, 124 86" fill="none" stroke="#1C1A17" stroke-width="3" stroke-linecap="round" />
+
+                    <!-- 粗眉毛 -->
+                    <path d="M72 74 C78 70, 88 70, 92 75" fill="none" stroke="#1C1A17" stroke-width="4.5" stroke-linecap="round" />
+                    <path d="M108 74 C112 70, 122 70, 128 75" fill="none" stroke="#1C1A17" stroke-width="4.5" stroke-linecap="round" />
+
+                    <!-- 鼻子 (圓潤且帶有些微陰影感) -->
+                    <path d="M94 98 C94 92, 106 92, 106 98 C106 104, 94 104, 94 98 Z" fill="#EAD9C9" stroke="#1C1A17" stroke-width="2" />
+
+                    <!-- 微笑嘴巴 (溫和、單純的弧線) -->
+                    <path d="M82 112 Q100 122 118 112" fill="none" stroke="#1C1A17" stroke-width="2.5" stroke-linecap="round" />
+
+                    <!-- 下巴陰影與鬍渣點綴 (低調乾淨) -->
+                    <path d="M96 128 Q100 129 104 128" stroke="#1C1A17" stroke-width="1" stroke-linecap="round" />
+                </svg>
+
+                <!-- 水印標籤 -->
+                <div class="absolute bottom-4 bg-editorial-text text-editorial-bg text-[10px] font-mono py-1 px-3 rounded-full uppercase tracking-widest">
+                    Zzz... SLEEP MODE Active
+                </div>
+            </div>
+        </div>
+
+        <!-- 右欄：個人數據指標 (占比 3/12) -->
+        <div class="lg:col-span-3 flex flex-col justify-between h-full py-4 gap-8 lg:gap-12 order-3">
+            <div class="border-b thin-border pb-4">
+                <p class="text-3xl font-serif font-bold">15+</p>
+                <p class="text-xs font-mono text-editorial-muted uppercase tracking-wider mt-1">【待補充】 專業耍廢年份</p>
+            </div>
+            <div class="border-b thin-border pb-4">
+                <p class="text-3xl font-serif font-bold">280+</p>
+                <p class="text-xs font-mono text-editorial-muted uppercase tracking-wider mt-1">【待補充】 消耗碳水化合物種類</p>
+            </div>
+            <div class="border-b thin-border pb-4">
+                <p class="text-3xl font-serif font-bold">*99%</p>
+                <p class="text-xs font-mono text-editorial-muted uppercase tracking-wider mt-1">重力平衡＆睡意飽滿度</p>
+            </div>
+            <div>
+                <p class="text-3xl font-serif font-bold">50</p>
+                <p class="text-xs font-mono text-editorial-muted uppercase tracking-wider mt-1">隨處秒睡之極端環境數</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 技能條區塊 (橫向排列) -->
+    <section class="max-w-7xl mx-auto w-full px-6 py-8 border-t border-b thin-border grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+            <h4 class="text-xs font-mono uppercase tracking-widest font-bold mb-1">USER-CENTERED INGESTION</h4>
+            <p class="text-xs text-editorial-muted">吃東西：高效能固態能量轉換系統。</p>
+        </div>
+        <div>
+            <h4 class="text-xs font-mono uppercase tracking-widest font-bold mb-1">LIQUID SYSTEM ARCHITECT</h4>
+            <p class="text-xs text-editorial-muted">喝東西：液態冷卻液引流專家。</p>
+        </div>
+        <div>
+            <h4 class="text-xs font-mono uppercase tracking-widest font-bold mb-1">GRAVITY BALANCING</h4>
+            <p class="text-xs text-editorial-muted">到處睡：多地平面重力休眠測試。</p>
+        </div>
+        <div>
+            <h4 class="text-xs font-mono uppercase tracking-widest font-bold mb-1">【待補充】 FUTURE_SKILL</h4>
+            <p class="text-xs text-editorial-muted">等待解鎖的中年第二春技能。</p>
+        </div>
+    </section>
+
+    <!-- 合作商標牆 (Trusted By) - 完美復刻原圖低調高級感 -->
+    <section class="max-w-7xl mx-auto w-full px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+            <h3 class="text-xs font-mono uppercase tracking-widest text-editorial-muted">TRUSTED BY // 曾被這些事物所信賴</h3>
+            <p class="text-xs font-mono text-editorial-muted">【待補充】 1,000+ 個曾被我放鳥或一起擺爛的專案</p>
+        </div>
+        
+        <!-- 商標網格 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-editorial-border border border-editorial-border rounded-xl overflow-hidden">
+            <div class="bg-editorial-bg p-6 flex items-center justify-center gap-2 grayscale opacity-60 hover:opacity-100 transition">
+                <span class="font-bold text-sm tracking-widest font-serif">BedTime Blox</span>
+            </div>
+            <div class="bg-editorial-bg p-6 flex items-center justify-center gap-2 grayscale opacity-60 hover:opacity-100 transition">
+                <span class="font-bold text-sm tracking-widest font-serif">Supa Carb</span>
+            </div>
+            <div class="bg-editorial-bg p-6 flex items-center justify-center gap-2 grayscale opacity-60 hover:opacity-100 transition">
+                <span class="font-bold text-sm tracking-widest font-serif">Hype Sleep</span>
+            </div>
+            <div class="bg-editorial-bg p-6 flex items-center justify-center gap-2 grayscale opacity-60 hover:opacity-100 transition">
+                <span class="font-bold text-sm tracking-widest font-serif">Lazy Devs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我大區塊 (敘事排版) -->
+    <section class="max-w-7xl mx-auto w-full px-6 py-16 md:py-24 border-t thin-border grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-5">
+            <h2 class="serif-title text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                CRAFTING MINDFUL <br>擺爛 & INTUITIVE <br>依然是無所事事.
+            </h2>
+        </div>
+        <div class="md:col-span-7 flex flex-col gap-6 text-editorial-muted text-sm md:text-base leading-relaxed">
+            <p class="text-editorial-text text-xl font-medium">
+                Hey, I'm 不太行的隊友, 一個在高度競爭的數位時代裡，堅持把「無所事事」做到極致的中年男子。
+            </p>
+            <p>
+                在這個大家都在談論「賦能、協同、極速交付」的世界，我反其道而行。我深信，一個專案要走得長遠，必須要有一位隊友能夠在最關鍵的時刻保持絕對的「不活躍狀態」。這不只是擺爛，而是一門藝術：精準地虛度光陰，系統性地消耗碳水，並維持完美的心率穩定。
+            </p>
+            <p>
+                無論是高難度的沙發陷落測試，還是極致的拿鐵咖啡稀釋工程，我都能提供業界最穩定的物理輸出。如果您需要一個不會給您增加任何 KPI 壓力、且隨時能陪您在專案裡優雅躺平的隊友，您找對人了。
+            </p>
+        </div>
+    </section>
+
+    <!-- 作品集區塊 (Portfolio Grid) - 純 CSS 完美呈現視覺占位圖 -->
+    <section class="max-w-7xl mx-auto w-full px-6 py-16 border-t thin-border">
+        <div class="flex flex-col md:flex-row justify-between items-baseline gap-4 mb-12">
+            <h2 class="serif-title text-3xl md:text-4xl font-bold">PORTFOLIO</h2>
+            <p class="text-xs font-mono text-editorial-muted">探索我最新研發的各類躺平科技與不活躍範例</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- 作品一：Soundwave (聲波裝置) -->
+            <div class="group cursor-pointer">
+                <!-- 偽圖片占位區 -->
+                <div class="w-full aspect-[4/3] bg-editorial-card rounded-2xl overflow-hidden border thin-border relative flex items-center justify-center group-hover:scale-[1.01] transition-all duration-300">
+                    <!-- 聲波發射拟物化 SVG -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-neutral-800 to-stone-900 text-stone-300">
+                        <div class="w-16 h-16 rounded-full border border-stone-600 flex items-center justify-center mb-4">
+                            <span class="w-8 h-8 rounded-full bg-amber-500 animate-ping opacity-75 absolute"></span>
+                            <span class="w-6 h-6 rounded-full bg-amber-600 relative"></span>
+                        </div>
+                        <div class="flex items-center gap-1.5 h-12">
+                            <span class="w-1 h-4 bg-stone-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+                            <span class="w-1 h-8 bg-amber-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+                            <span class="w-1 h-12 bg-amber-500 rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+                            <span class="w-1 h-6 bg-stone-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+                            <span class="w-1 h-10 bg-stone-500 rounded-full animate-bounce" style="animation-delay: 0.5s"></span>
+                        </div>
+                        <span class="text-[10px] font-mono tracking-widest text-stone-500 mt-2">SOUNDWAVE_ENGINE_MOCKUP</span>
+                    </div>
+                    <span class="absolute top-4 right-4 text-xs font-mono bg-editorial-text/10 backdrop-blur text-editorial-text px-3 py-1 rounded-full">【待補充】</span>
+                </div>
+                <!-- 標題與標籤 -->
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg font-bold group-hover:underline">SOUNDWAVE</h3>
+                    <p class="text-xs font-mono text-editorial-muted">深層睡意環境噪音產生器 / 2026 / Sound Tech</p>
+                </div>
+            </div>
+
+            <!-- 作品二：Console Device (控制台) -->
+            <div class="group cursor-pointer">
+                <!-- 偽圖片占位區 -->
+                <div class="w-full aspect-[4/3] bg-editorial-card rounded-2xl overflow-hidden border thin-border relative flex items-center justify-center group-hover:scale-[1.01] transition-all duration-300">
+                    <!-- 控制台擬物化 SVG -->
+                    <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-tr from-stone-900 to-neutral-900 text-stone-300">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono tracking-wider text-stone-500">SYSTEM: SUSPENDED</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                        </div>
+                        <!-- 類比儀表 -->
+                        <div class="flex justify-around items-end h-24 my-2">
+                            <div class="w-16 h-16 rounded-full border-4 border-stone-700 relative flex items-center justify-center">
+                                <div class="w-1 h-7 bg-amber-500 origin-bottom absolute bottom-1/2 rotate-45 rounded"></div>
+                                <span class="text-[8px] font-mono text-stone-500 absolute bottom-2">CARB</span>
+                            </div>
+                            <div class="w-16 h-16 rounded-full border-4 border-stone-700 relative flex items-center justify-center">
+                                <div class="w-1 h-7 bg-amber-500 origin-bottom absolute bottom-1/2 -rotate-12 rounded"></div>
+                                <span class="text-[8px] font-mono text-stone-500 absolute bottom-2">SLEEP</span>
+                            </div>
+                        </div>
+                        <span class="text-[10px] font-mono tracking-widest text-stone-600 text-center">ANALOG_METERS_DEVICE_V1</span>
+                    </div>
+                    <span class="absolute top-4 right-4 text-xs font-mono bg-editorial-text/10 backdrop-blur text-editorial-text px-3 py-1 rounded-full">【待補充】</span>
+                </div>
+                <!-- 標題與標籤 -->
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg font-bold group-hover:underline">SLEEP_INDICATOR</h3>
+                    <p class="text-xs font-mono text-editorial-muted">物理休眠深層指數模擬器 / 2026 / Hardware Mockup</p>
+                </div>
+            </div>
+
+            <!-- 作品三：Abstract Geometric (幾何裝置) -->
+            <div class="group cursor-pointer">
+                <!-- 偽圖片占位區 -->
+                <div class="w-full aspect-[4/3] bg-editorial-card rounded-2xl overflow-hidden border thin-border relative flex items-center justify-center group-hover:scale-[1.01] transition-all duration-300">
+                    <!-- 抽象幾何 SVG -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-stone-950">
+                        <!-- 抽象 3D 球體與環繞線 -->
+                        <div class="relative w-28 h-28 flex items-center justify-center">
+                            <div class="absolute w-28 h-28 rounded-full border border-stone-800 animate-spin" style="animation-duration: 10s"></div>
+                            <div class="absolute w-24 h-24 rounded-full border border-dashed border-stone-700 animate-spin" style="animation-duration: 6s"></div>
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 shadow-xl shadow-amber-500/20"></div>
+                        </div>
+                    </div>
+                    <span class="absolute top-4 right-4 text-xs font-mono bg-editorial-text/10 backdrop-blur text-editorial-text px-3 py-1 rounded-full">【待補充】</span>
+                </div>
+                <!-- 標題與標籤 -->
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg font-bold group-hover:underline">ORBIT_CARB</h3>
+                    <p class="text-xs font-mono text-editorial-muted">軌道式碳水化合物捕獲天線 / 2026 / Concept Art</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 聯絡方式大區塊 (完全對標原圖) -->
+    <section id="contact" class="max-w-7xl mx-auto w-full px-6 py-16 border-t thin-border">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="serif-title text-3xl md:text-4xl font-bold mb-4">LET'S COLLABORATE //</h2>
+                <p class="text-editorial-muted text-sm md:text-base leading-relaxed mb-8 max-w-md">
+                    如果您也對無所事事充滿熱情，或者需要一位隨時能跟您保持同步擺擺的隊友，歡迎隨時透過下方的方式與我建立連線。
+                </p>
+                <div class="text-xs text-editorial-muted font-mono uppercase tracking-widest">
+                    ⚠️ 注意：回覆速度可能因重力平衡狀態（睡覺中）而有些微延遲
+                </div>
+            </div>
+            
+            <!-- 聯絡方式按鈕列 -->
+            <div class="flex flex-col gap-4 justify-center">
+                <!-- 電話 -->
+                <button onclick="copyToClipboard('+886 912 345 678', '電話')" class="group flex items-center justify-between p-4 bg-editorial-card hover:bg-editorial-text hover:text-editorial-bg rounded-2xl border thin-border transition-all duration-300 w-full text-left">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-editorial-bg group-hover:bg-neutral-800 rounded-xl flex items-center justify-center transition-all">
+                            <!-- 電話 SVG -->
+                            <svg class="w-5 h-5 text-editorial-text group-hover:text-editorial-bg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6M3 10.5h1.5a2.25 2.25 0 002.25-2.25V6a3 3 0 016 0v.75A2.25 2.25 0 0015 9h5.25a3 3 0 013 3v3.562m-2.25 3.75a10.5 10.5 0 01-16.5-16.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono text-editorial-muted group-hover:text-stone-300 uppercase tracking-wider">Phone // 撥打專線</p>
+                            <p class="font-mono font-bold">+886 912 345 678</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+                </button>
+
+                <!-- 信箱 -->
+                <button onclick="copyToClipboard('not.good.teammate@example.com', '信箱')" class="group flex items-center justify-between p-4 bg-editorial-card hover:bg-editorial-text hover:text-editorial-bg rounded-2xl border thin-border transition-all duration-300 w-full text-left">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-editorial-bg group-hover:bg-neutral-800 rounded-xl flex items-center justify-center transition-all">
+                            <!-- 郵件 SVG -->
+                            <svg class="w-5 h-5 text-editorial-text group-hover:text-editorial-bg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono text-editorial-muted group-hover:text-stone-300 uppercase tracking-wider">Email // 電子郵件</p>
+                            <p class="font-mono font-bold">not.good.teammate@example.com</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="max-w-7xl mx-auto w-full px-6 py-8 border-t thin-border flex flex-col sm:flex-row items-center justify-between text-xs text-editorial-muted gap-4">
+        <p>© 2026 不太行的隊友. All rights reserved. 依據優雅擺爛原則製作。</p>
+        <p class="font-mono">STAY LAZY, SLEEP MORE.</p>
+    </footer>
+
+    <!-- 自訂極簡提示通知 (替代 alert) -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-editorial-text text-editorial-bg px-5 py-4 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 z-50">
+        <svg class="w-5 h-5 text-editorial-bg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <div>
+            <p class="text-[10px] font-mono opacity-80 uppercase tracking-widest">SYSTEM_NOTIFICATION</p>
+            <p class="text-sm font-bold mt-0.5" id="toast-msg">複製成功</p>
+        </div>
+    </div>
+
+    <!-- 邏輯處理腳本 -->
+    <script>
+        function copyToClipboard(text, type) {
+            // 使用 iframe 沙盒安全複製方案
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast(`${type} 已成功複製到剪貼簿`);
+                } else {
+                    showToast('複製失敗，請手動複製');
+                }
+            } catch (err) {
+                showToast('不支援此瀏覽器自動複製');
+            }
+            
+            document.body.removeChild(tempInput);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            
+            toastMsg.innerText = message;
+            
+            // 彈出 Toast
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            // 2.5 秒後收回
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
